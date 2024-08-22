@@ -27,9 +27,9 @@ test_that("check that an open ai api key works", {
 
   api_key <- readLines("openai.txt")
 
-  words_to_retrieve <- c("test", "experiment", "elephant")
+  words_to_retrieve <- c("test")
 
-  vectors <- retrieve_vectors(words_to_retrieve, api_key = api_key)
+  vectors <- retrieve_vectors(inputs = words_to_retrieve, api_key = api_key)
 
   expect_true(is.data.table(vectors))
 })
